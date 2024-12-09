@@ -71,9 +71,8 @@ const Home = () => {
       </div> */}
       <p className="info-text">
         <p>
-          Join the movement effortlessly! Just share your name and college, and
-          we’ll help you tweet your support for <strong>#Increase</strong> with
-          a single click. Together, we can amplify our voices!
+        Join the movement for a brighter future in research and innovation—click the support button below to spread the word and amplify the call for better M.Tech stipends across India!
+        <strong>#Increase  #IncreaseMTechStipend #EducationReform #SupportInnovation</strong>
         </p>
       </p>
       <button onClick={handleTweetSubmit} className="submit-button">

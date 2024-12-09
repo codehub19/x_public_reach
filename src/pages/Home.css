@@ -27,6 +27,8 @@
   }
   
   .info-text p{
+    margin: auto;
+    width: 65%;
     text-align: center;
     display: flex;
     flex-direction: column;

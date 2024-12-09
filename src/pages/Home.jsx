@@ -22,8 +22,8 @@ const Home = () => {
     //   return;
     // }
 
-    const name = nameRef.current.value;
-    const college = collegeRef.current.value;
+    // const name = nameRef.current.value;
+    // const college = collegeRef.current.value;
     const tweet = `URGENT! @PMOIndia @RahulGandhi @DharmendraPradhan @MHRD_GoI @AICTE_INDIA Revise M.Tech stipends to ₹18,000-20,000/month. Align with NEP 2020 for sustainable research & innovation in India #Increase.MtechStipend #EducationReform`;
 
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;

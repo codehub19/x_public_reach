@@ -3,8 +3,8 @@ import './Home.css';
 import x_logo from '../assets/x_logo.png';
 
 const Home = () => {
-  const nameRef = useRef(null);
-  const collegeRef = useRef(null);
+  // const nameRef = useRef(null);
+  // const collegeRef = useRef(null);
 
   // Function to check if the X app (formerly Twitter) is installed
   const isAppInstalled = (scheme) => {
@@ -17,10 +17,10 @@ const Home = () => {
 
   // Handle submitting the tweet
   const handleTweetSubmit = () => {
-    if (!nameRef.current.value || !collegeRef.current.value) {
-      alert('Please fill in all the fields');
-      return;
-    }
+    // if (!nameRef.current.value || !collegeRef.current.value) {
+    //   alert('Please fill in all the fields');
+    //   return;
+    // }
 
     const name = nameRef.current.value;
     const college = collegeRef.current.value;
@@ -49,7 +49,7 @@ const Home = () => {
       <div className="support">
         <h2>#INCREASE.MTECH.STIPEND</h2>
       </div>
-      <div className="form">
+      {/* <div className="form">
         <label htmlFor="name">Name</label>
         <input
           required
@@ -68,7 +68,7 @@ const Home = () => {
           name="college"
           placeholder="Enter your college"
         />
-      </div>
+      </div> */}
       <p className="info-text">
         <p>
           Join the movement effortlessly! Just share your name and college, and

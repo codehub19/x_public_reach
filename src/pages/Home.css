@@ -26,6 +26,9 @@
     justify-content: center;
   }
   
+  strong{
+    color: #f6ff00d4;
+  }
   .info-text p{
     margin: auto;
     width: 65%;
@@ -84,6 +87,7 @@
     transition: background-color 0.3s;
     width: 100%; /* Button stretches for smaller screens */
     max-width: 200px; /* Limits size on larger screens */
+    margin: 5px 0;
   }
   
   .submit-button:hover {

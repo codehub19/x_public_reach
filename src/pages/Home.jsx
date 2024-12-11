@@ -3,10 +3,6 @@ import './Home.css';
 import x_logo from '../assets/x_logo.png';
 
 const Home = () => {
-  // const nameRef = useRef(null);
-  // const collegeRef = useRef(null);
-
-  // Function to check if the X app (formerly Twitter) is installed
   const isAppInstalled = (scheme) => {
     const iframe = document.createElement('iframe');
     iframe.style.display = 'none';
@@ -16,27 +12,40 @@ const Home = () => {
   };
 
   // Handle submitting the tweet
-  const handleTweetSubmit = () => {
-    // if (!nameRef.current.value || !collegeRef.current.value) {
-    //   alert('Please fill in all the fields');
-    //   return;
-    // }
+  const handleTweetSubmit1 = () => {
+    const tweet1 = `URGENT!
+    @EduMinOfIndia Revise MTech stipend to ₹18,000-20,000/Month. Align with NEP 2020 for sustainable research & innovation in India.
+    @dpradhanbjp @OfficeDp @AICTE_INDIA @mhrd_innovation @ugc_india @PMOIndia
+    #IncreaseMTechStipend #MoE 
+    #EducationReform #GATE`;
 
-    // const name = nameRef.current.value;
-    // const college = collegeRef.current.value;
-    const tweet = `URGENT! @PMOIndia @RahulGandhi @DharmendraPradhan @MHRD_GoI @AICTE_INDIA Revise M.Tech stipends to ₹18,000-20,000/month. Align with NEP 2020 for sustainable research & innovation in India #Increase.MtechStipend #EducationReform`;
+    const twitterUrl_1 = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet1)}`;
+    const twitterAppUrl_1 = `twitter://intent/tweet?text=${encodeURIComponent(tweet1)}`;
 
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
-    const twitterAppUrl = `twitter://intent/tweet?text=${encodeURIComponent(tweet)}`;
-
-    // Function to open the app or web based on availability
     const openTwitterAppOrWeb = () => {
-      // Try to open the X app first
-      isAppInstalled(twitterAppUrl);
-
-      // If the app isn't installed, fallback to opening the web version
+      isAppInstalled(twitterAppUrl_1);
       setTimeout(() => {
-        window.open(twitterUrl, '_blank');
+        window.open(twitterUrl_1, '_blank');
+      }, 1500); // Wait 1.5 seconds for the app to open
+    };
+
+    openTwitterAppOrWeb();
+  };
+
+
+
+  const handleTweetSubmit2 = () => {
+
+    const tweet2 = `#IncreaseMTechStipend #Stipend #IIT
+    @rashtrapatibhvn @VPIndia @SWAYAMMHRD @ncteDelhi @RahulGandhi @narendramodi @DrSukantaBJP @somnathnow @abhayjere @DoT_India @DrRPNishank @Drsubhassarkar @mamidala90 @MamtaRAgarwal1 @rksoni_aicte @ms_aicte @IKS_Media @UnivofDelhi @NITIAayog`
+
+    const twitterUrl_2 = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet2)}`;
+    const twitterAppUrl_2 = `twitter://intent/tweet?text=${encodeURIComponent(tweet2)}`;
+
+    const openTwitterAppOrWeb = () => {
+      isAppInstalled(twitterAppUrl_2);
+      setTimeout(() => {
+        window.open(twitterUrl_2, '_blank');
       }, 1500); // Wait 1.5 seconds for the app to open
     };
 
@@ -49,34 +58,17 @@ const Home = () => {
       <div className="support">
         <h2>#INCREASE.MTECH.STIPEND</h2>
       </div>
-      {/* <div className="form">
-        <label htmlFor="name">Name</label>
-        <input
-          required
-          ref={nameRef}
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your name"
-        />
-        <label htmlFor="college">College</label>
-        <input
-          required
-          ref={collegeRef}
-          type="text"
-          id="college"
-          name="college"
-          placeholder="Enter your college"
-        />
-      </div> */}
       <p className="info-text">
         <p>
-        Join the movement for a brighter future in research and innovation—click the support button below to spread the word and amplify the call for better M.Tech stipends across India!
+        Join the movement for a brighter future in research and innovation—<strong>click the post buttons below</strong>to spread the word and amplify the call for better M.Tech stipends across India!
         <strong>#Increase  #IncreaseMTechStipend #EducationReform #SupportInnovation</strong>
         </p>
       </p>
-      <button onClick={handleTweetSubmit} className="submit-button">
-        Support
+      <button onClick={handleTweetSubmit1}   className="submit-button">
+        Post-1
+      </button>
+      <button onClick={handleTweetSubmit2}   className="submit-button">
+        Post-2
       </button>
     </div>
   );
